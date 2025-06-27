@@ -3,48 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Dynamic Quote Generator</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-      }
-      #quoteDisplay {
-        margin: 20px 0;
-        padding: 10px;
-        background: #f1f1f1;
-        border-radius: 5px;
-      }
-      button {
-        padding: 8px 12px;
-        margin: 5px 0;
-      }
-      input {
-        padding: 8px;
-        margin: 5px 0;
-        width: 200px;
-      }
-    </style>
   </head>
+
   <body>
     <h1>Dynamic Quote Generator</h1>
 
-    <!-- Display area for quote -->
-    <div id="quoteDisplay"></div>
+    <!-- Category Filter -->
+    <select id="categoryFilter" onchange="filterQuotes()">
+      <option value="all">All Categories</option>
+    </select>
 
-    <!-- Button to display random quote -->
+    <!-- Quote Display -->
+    <div id="quoteDisplay"></div>
     <button id="newQuote">Show New Quote</button>
 
-    <!-- Form to add new quote -->
+    <!-- Add Quote Form -->
+    <div id="quoteFormContainer"></div>
+
+    <!-- JSON Import/Export Controls -->
     <div>
-      <input id="newQuoteText" type="text" placeholder="Enter a new quote" />
       <input
-        id="newQuoteCategory"
-        type="text"
-        placeholder="Enter quote category"
+        type="file"
+        id="importFile"
+        accept=".json"
+        onchange="importFromJsonFile(event)"
       />
-      <button onclick="addQuote()">Add Quote</button>
+      <button onclick="exportToJsonFile()">Export Quotes</button>
     </div>
+    <!-- Sync notification (at bottom right) -->
+    <div id="syncNotification" style="display: none"></div>
+    <button onclick="clearLocalStorage()">Clear Local Storage</button>
 
     <script src="script.js"></script>
   </body>

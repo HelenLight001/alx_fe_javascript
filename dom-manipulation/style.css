@@ -1,0 +1,95 @@
+/* General Page Styling */
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f7f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* Quote Display Box */
+#quoteDisplay {
+  background: #ffffff;
+  border: 2px solid #ddd;
+  border-left: 5px solid #3498db;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  min-height: 100px;
+  font-size: 1.2em;
+  font-style: italic;
+  color: #555;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styling */
+button {
+  padding: 10px 15px;
+  margin: 10px 5px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Input Fields */
+input[type="text"] {
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+
+/* Select Dropdown */
+select {
+  padding: 10px;
+  margin: 10px 5px 0;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  width: 220px;
+  background-color: #fff;
+  font-size: 1em;
+}
+
+/* Container for Input Section */
+.quote-inputs {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* File input (hidden default look) */
+input[type="file"] {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+/* Sync Notification */
+#syncNotification {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background: #fffae6;
+  color: #333;
+  border: 1px solid #f0c36d;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+}
